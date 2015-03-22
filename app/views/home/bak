@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2.col-lg-offset-2">
+      <h1>Encrypted EX</h1>
+
+      <%= form_for @encrypted_message do |field| %>
+        <%= field.text_field :email %>
+        <%= field.text_field :msg %>
+        <%= text_field_tag :pass_phrase %>
+
+        <%= submit_tag 'Send Msg' %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-2.col-lg-offset-2">
+      <%= form_tag @decrypt_msg, class: 'form-horizontal' do |field| %>
+        <div class="form-group">
+          <div class="col
+          <%= text_field_tag :sender %>
+          <%= text_field_tag :pass_phrase %>
+
+          <%= submit_tag 'decrypte' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
